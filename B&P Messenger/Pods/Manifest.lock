@@ -49,6 +49,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - JSQMessagesViewController
+  - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -70,7 +72,8 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 6587f56aedbcb150a8ba1d968e1ef58b1bc758b7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: a2597be7d5f584699cbca346595e26363d9c7223
+PODFILE CHECKSUM: 16c6b008b082e698a4727389296f9dd9c568942f
 
 COCOAPODS: 1.3.1

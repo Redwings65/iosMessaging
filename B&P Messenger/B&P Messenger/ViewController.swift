@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 var userName = ""
 class ViewController: UIViewController {
@@ -19,6 +20,9 @@ class ViewController: UIViewController {
         if(textField.text != ""){
             userName = textField.text!
             performSegue(withIdentifier: "segue1", sender: self)
+        }
+        else{
+            self.view.makeToast("You need to put in a username, try againb")
         }
     }
     override func viewDidLoad() {

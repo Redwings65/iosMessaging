@@ -36,7 +36,6 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func createRoomButton(_ sender: AnyObject) {
-        chatroom = createRoom?.text
         list.append((createRoom?.text)!)
         print(createRoom?.text)
         DispatchQueue.main.async(execute: { () -> Void in

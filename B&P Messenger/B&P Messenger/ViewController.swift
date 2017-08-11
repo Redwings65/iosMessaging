@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "segue1", sender: self)
         }
         else{
-            //do something
+            self.view.makeToast("Try putting in a username.")
         }
     }
     override func viewDidLoad() {

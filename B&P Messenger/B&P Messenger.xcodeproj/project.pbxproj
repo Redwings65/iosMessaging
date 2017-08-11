@@ -83,6 +83,7 @@
 		559368281F3A6DF40006FD3B /* B&P Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */,
 				554724C01F3AA444005EB681 /* SecondViewController.swift */,
 				554724BE1F3AA269005EB681 /* ViewController.swift */,
 				554724B51F3A788F005EB681 /* constants.swift */,
@@ -92,7 +93,6 @@
 				559368321F3A6DF40006FD3B /* LaunchScreen.storyboard */,
 				554724B31F3A7731005EB681 /* GoogleService-Info.plist */,
 				559368351F3A6DF40006FD3B /* Info.plist */,
-				5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */,
 			);
 			path = "B&P Messenger";
 			sourceTree = "<group>";
@@ -201,19 +201,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-B&P Messenger/Pods-B&P Messenger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Atlas/Atlas.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
+				"${PODS_ROOT}/LayerKit/LayerKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atlas.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayerKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

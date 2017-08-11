@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "segue1", sender: self)
         }
         else{
-            self.view.makeToast("You need to put in a username, try againb")
+            //do something
         }
     }
     override func viewDidLoad() {
@@ -35,16 +35,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    
-
-    
-    
-    
-    
-    
-    
     
     func dismissKeyboard() {
         view.endEditing(true)

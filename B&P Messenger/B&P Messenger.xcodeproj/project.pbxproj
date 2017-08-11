@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5513A7AD1F3D33ED0034EAA3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */; };
 		554724B41F3A7731005EB681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 554724B31F3A7731005EB681 /* GoogleService-Info.plist */; };
 		554724B61F3A788F005EB681 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554724B51F3A788F005EB681 /* constants.swift */; };
 		554724BF1F3AA269005EB681 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554724BE1F3AA269005EB681 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0C757EF4D7DBA45CD77C3C72 /* Pods_B_P_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_B_P_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		554724B21F3A7485005EB681 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		554724B31F3A7731005EB681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		554724B51F3A788F005EB681 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = constants.swift; path = ../constants.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				559368321F3A6DF40006FD3B /* LaunchScreen.storyboard */,
 				554724B31F3A7731005EB681 /* GoogleService-Info.plist */,
 				559368351F3A6DF40006FD3B /* Info.plist */,
+				5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */,
 			);
 			path = "B&P Messenger";
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				554724C11F3AA444005EB681 /* SecondViewController.swift in Sources */,
 				554724BF1F3AA269005EB681 /* ViewController.swift in Sources */,
+				5513A7AD1F3D33ED0034EAA3 /* ThirdViewController.swift in Sources */,
 				5593682A1F3A6DF40006FD3B /* AppDelegate.swift in Sources */,
 				554724B61F3A788F005EB681 /* constants.swift in Sources */,
 			);

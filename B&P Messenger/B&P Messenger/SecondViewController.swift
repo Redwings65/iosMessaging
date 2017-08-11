@@ -11,47 +11,37 @@ import Firebase
 import FirebaseDatabase
 
 class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-    
+
     var ref: DatabaseReference!
     
     @IBOutlet weak var tableView1: UITableView?
     @IBOutlet weak var createRoom: UITextField?
+
+    var list = [String]()
     
-    //var list = [String]()
-    var list = ["BMW","Audi", "Volkswagen"]
-    
-    override func viewDidLoad() {//this is fine
+    override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         tableView1?.delegate = self
         tableView1?.dataSource = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {//this is only for closing keyboard
-        //label?.text = userName
+    override func viewDidAppear(_ animated: Bool) {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func createRoomButton(_ sender: AnyObject) {//UIButton
-        //list.append(createRoom.text!)
-        //self.tableView.reloadData()
-        //list.insert(createRoom.text!, at: 0)
-        //add your data into tables array from textField
+    @IBAction func createRoomButton(_ sender: AnyObject) {
+        chatroom = createRoom?.text
         list.append((createRoom?.text)!)
         print(createRoom?.text)
         DispatchQueue.main.async(execute: { () -> Void in
-            //reload your tableView
             self.tableView1?.reloadData()
         })
-        
-        //    createRoom?.resignFirstResponder()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,28 +50,33 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return list.count
-        //0 or list.count
     }
     
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
-        //cell.textLabel?.text = self.list[indexPath.row]
-        
-        //let cell = tableView1?.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = self.list[indexPath.row]
         return cell
     }
-    
-    
-    
-    
-    
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segue2", sender: self)
+        
+    }
     
     func dismissKeyboard() {
         view.endEditing(true)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

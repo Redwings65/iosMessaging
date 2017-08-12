@@ -1,11 +1,3 @@
-//
-//  SecondViewController.swift
-//  
-//
-//  Created by Brandon Seager on 8/8/17.
-//
-//
-
 import UIKit
 import Firebase
 import FirebaseDatabase
@@ -13,12 +5,12 @@ import FirebaseDatabase
 var group = String()
 
 class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-
+    
     var ref: DatabaseReference!
     
     @IBOutlet weak var tableView1: UITableView?
     @IBOutlet weak var createRoom: UITextField?
-
+    
     var list = [String]()
     
     override func viewDidLoad() {
@@ -33,7 +25,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -59,10 +51,10 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
                 DispatchQueue.main.async {
                     self.tableView1?.reloadData()
                 }
-            
+                
             }
         })
-
+        
     }
     
     
@@ -73,11 +65,11 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-                return list.count
+        return list.count
         
-        }
+    }
     
-   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
         cell.textLabel?.text = self.list[indexPath.row]
         return cell
@@ -94,6 +86,12 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
         view.endEditing(true)
     }
 }
+
+
+
+
+
+
 
 
 

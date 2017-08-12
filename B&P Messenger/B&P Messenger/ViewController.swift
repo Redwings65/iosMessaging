@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toast_Swift
 
 var userName = ""
 class ViewController: UIViewController {
@@ -22,7 +21,10 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "segue1", sender: self)
         }
         else{
-            self.view.makeToast("Try putting in a username.")
+            let alert = UIAlertController(title: "Invalid Credentials", message: "Please enter a username", preferredStyle: .alert)
+            let okay = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+            alert.addAction(okay)
+            present(alert, animated: true, completion: nil)
         }
     }
     override func viewDidLoad() {

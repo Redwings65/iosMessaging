@@ -6,5 +6,4 @@
 //  Copyright © 2017 Brandon Seager. All rights reserved.
 //
 
-import UIKit
-
+import Foundation

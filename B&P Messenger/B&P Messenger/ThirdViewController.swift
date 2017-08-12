@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class ThirdViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var messages = [Message]()
@@ -41,7 +41,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
     
     func observeMessages(){
         Database.database().reference().child(group).observe(.value, with: { (snapshot) in
@@ -49,14 +49,14 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
                 self.messages.removeAll()
                 for snap in snapshot{
                     if let dictionary = snap.value as? [String:AnyObject]{
-                    let message = Message()
-                    message.message = dictionary["message"] as! String
-                    message.name = dictionary["name"] as! String
-                    print(message.message)
-                    self.messages.append(message)
+                        let message = Message()
+                        message.message = dictionary["message"] as! String
+                        message.name = dictionary["name"] as! String
+                        print(message.message)
+                        self.messages.append(message)
                     }
                 }
-
+                
             }
             
             DispatchQueue.main.async {
@@ -65,8 +65,8 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
             }
             
         })
-   
-
+        
+        
     }
     
     func postMessage(){
@@ -74,26 +74,30 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
             .setValue(["name" : userName, "message" : inputContainer.inputTextField.text!])
     }
     func setupUI(){
-       view.addSubview(inputContainer)
+        view.addSubview(inputContainer)
     }
     
-  
+    
     private func setupCell(cell: ChatMessageCell, message: Message){
         
         
         if message.name == userName{
             //outgoing blue
-            cell.bubbleView.backgroundColor = UIColor(red: 1, green: 0.28, blue: 0.28, alpha: 1)
+            cell.bubbleView.backgroundColor = UIColor.blue
             cell.textView.textColor = .white
             
             cell.bubbleViewLeftAnchor?.isActive = false
             cell.bubbleViewRightAnchor?.isActive = true
+            
+            cell.nameLbl.isHidden = true
         }else{
             //incoming gray
             cell.bubbleView.backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.0)
             cell.textView.textColor = .black
             cell.bubbleViewLeftAnchor?.isActive = true
             cell.bubbleViewRightAnchor?.isActive = false
+            cell.nameLbl.isHidden = false
+
         }
         
     }
@@ -121,7 +125,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ChatMessageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ChatMessageCell
         
         
         
@@ -134,6 +138,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
         setupCell(cell: cell, message: message)
         
         cell.textView.text = message.message
+        cell.nameLbl.text = message.name
         
         return cell
         
@@ -180,6 +185,15 @@ class ChatMessageCell: UICollectionViewCell {
     }()
     
     
+    let nameLbl: UILabel = {
+       let lbl = UILabel()
+        lbl.font = UIFont(name: "Avenir Next", size: 10)
+        lbl.backgroundColor = .clear
+        lbl.textColor = .lightGray
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
     static let blueColor = UIColor(red: 0.12, green: 0.54, blue: 0.96, alpha: 1.0)
     
     //set background
@@ -203,7 +217,7 @@ class ChatMessageCell: UICollectionViewCell {
         
         addSubview(bubbleView)
         addSubview(textView)
-        
+        addSubview(nameLbl)
         
         
         
@@ -223,6 +237,11 @@ class ChatMessageCell: UICollectionViewCell {
         textView.rightAnchor.constraint(equalTo: bubbleView.rightAnchor).isActive = true
         textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         
+        nameLbl.bottomAnchor.constraint(equalTo: bubbleView.topAnchor).isActive = true
+        nameLbl.leftAnchor.constraint(equalTo: bubbleView.leftAnchor).isActive = true
+        nameLbl.widthAnchor.constraint(equalToConstant: 50)
+        nameLbl.heightAnchor.constraint(equalToConstant: 12)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -231,5 +250,6 @@ class ChatMessageCell: UICollectionViewCell {
     
     
 }
+
 
 

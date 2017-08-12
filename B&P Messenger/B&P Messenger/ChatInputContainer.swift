@@ -11,7 +11,7 @@ import UIKit
 
 class ChatInputContainerView: UIView, UITextFieldDelegate{
     
- var chatLogController: ThirdViewController? {
+    var chatLogController: ThirdViewController? {
         didSet{
             sendBtn.addTarget(chatLogController, action: #selector(ThirdViewController.handleSend), for: .touchUpInside)
         }
@@ -57,16 +57,16 @@ class ChatInputContainerView: UIView, UITextFieldDelegate{
         addSubview(self.inputTextField)
         
         self.inputTextField.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
-            self.inputTextField.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-            self.inputTextField.rightAnchor.constraint(equalTo: sendBtn.leftAnchor).isActive = true
-            self.inputTextField.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
-            
-            addSubview(separator)
-            
-            separator.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-            separator.topAnchor.constraint(equalTo: topAnchor).isActive = true
-            separator.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-            separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        self.inputTextField.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        self.inputTextField.rightAnchor.constraint(equalTo: sendBtn.leftAnchor).isActive = true
+        self.inputTextField.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
+        
+        addSubview(separator)
+        
+        separator.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        separator.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        separator.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
+        separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         
         

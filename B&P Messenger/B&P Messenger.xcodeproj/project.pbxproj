@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5503C53D1F3EA87800DA3DA3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5503C53C1F3EA87800DA3DA3 /* File.swift */; };
+		5503C53F1F3F697D00DA3DA3 /* ChatInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5503C53E1F3F697D00DA3DA3 /* ChatInputContainer.swift */; };
+		5503C5411F3F71B200DA3DA3 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5503C5401F3F71B200DA3DA3 /* ChatMessageCell.swift */; };
 		5513A7AD1F3D33ED0034EAA3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */; };
-		554724B41F3A7731005EB681 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 554724B31F3A7731005EB681 /* GoogleService-Info.plist */; };
 		554724B61F3A788F005EB681 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554724B51F3A788F005EB681 /* constants.swift */; };
 		554724BF1F3AA269005EB681 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554724BE1F3AA269005EB681 /* ViewController.swift */; };
 		554724C11F3AA444005EB681 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554724C01F3AA444005EB681 /* SecondViewController.swift */; };
@@ -18,15 +19,18 @@
 		559368311F3A6DF40006FD3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559368301F3A6DF40006FD3B /* Assets.xcassets */; };
 		559368341F3A6DF40006FD3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559368321F3A6DF40006FD3B /* LaunchScreen.storyboard */; };
 		5593683C1F3A6E480006FD3B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 5593683B1F3A6E480006FD3B /* Podfile */; };
+		55E27BA11F3F79A600E25031 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E27BA01F3F79A600E25031 /* GoogleService-Info.plist */; };
+		55E27BA51F3F7B3500E25031 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55E27BA41F3F7B3500E25031 /* info.plist */; };
 		A28C6422F5CCE1BDD0D8DAE1 /* Pods_B_P_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C757EF4D7DBA45CD77C3C72 /* Pods_B_P_Messenger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C757EF4D7DBA45CD77C3C72 /* Pods_B_P_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_B_P_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5503C53C1F3EA87800DA3DA3 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		5503C53E1F3F697D00DA3DA3 /* ChatInputContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInputContainer.swift; sourceTree = "<group>"; };
+		5503C5401F3F71B200DA3DA3 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		5513A7AC1F3D33ED0034EAA3 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		554724B21F3A7485005EB681 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		554724B31F3A7731005EB681 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		554724B51F3A788F005EB681 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = constants.swift; path = ../constants.swift; sourceTree = "<group>"; };
 		554724BE1F3AA269005EB681 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		554724C01F3AA444005EB681 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -35,8 +39,9 @@
 		5593682E1F3A6DF40006FD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		559368301F3A6DF40006FD3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		559368331F3A6DF40006FD3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		559368351F3A6DF40006FD3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5593683B1F3A6E480006FD3B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		55E27BA01F3F79A600E25031 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		55E27BA41F3F7B3500E25031 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		9D4F32DE8EF99C9B01BE53AB /* Pods-B&P Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B&P Messenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B&P Messenger/Pods-B&P Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		A5CC04229DC83B33F67EBFE8 /* Pods-B&P Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B&P Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-B&P Messenger/Pods-B&P Messenger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,9 +98,11 @@
 				5593682D1F3A6DF40006FD3B /* Main.storyboard */,
 				559368301F3A6DF40006FD3B /* Assets.xcassets */,
 				559368321F3A6DF40006FD3B /* LaunchScreen.storyboard */,
-				554724B31F3A7731005EB681 /* GoogleService-Info.plist */,
-				559368351F3A6DF40006FD3B /* Info.plist */,
 				5503C53C1F3EA87800DA3DA3 /* File.swift */,
+				5503C53E1F3F697D00DA3DA3 /* ChatInputContainer.swift */,
+				5503C5401F3F71B200DA3DA3 /* ChatMessageCell.swift */,
+				55E27BA01F3F79A600E25031 /* GoogleService-Info.plist */,
+				55E27BA41F3F7B3500E25031 /* info.plist */,
 			);
 			path = "B&P Messenger";
 			sourceTree = "<group>";
@@ -171,9 +178,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55E27BA51F3F7B3500E25031 /* info.plist in Resources */,
 				559368341F3A6DF40006FD3B /* LaunchScreen.storyboard in Resources */,
 				559368311F3A6DF40006FD3B /* Assets.xcassets in Resources */,
-				554724B41F3A7731005EB681 /* GoogleService-Info.plist in Resources */,
+				55E27BA11F3F79A600E25031 /* GoogleService-Info.plist in Resources */,
 				5593683C1F3A6E480006FD3B /* Podfile in Resources */,
 				5593682F1F3A6DF40006FD3B /* Main.storyboard in Resources */,
 			);
@@ -255,7 +263,9 @@
 				554724BF1F3AA269005EB681 /* ViewController.swift in Sources */,
 				5513A7AD1F3D33ED0034EAA3 /* ThirdViewController.swift in Sources */,
 				5593682A1F3A6DF40006FD3B /* AppDelegate.swift in Sources */,
+				5503C5411F3F71B200DA3DA3 /* ChatMessageCell.swift in Sources */,
 				554724B61F3A788F005EB681 /* constants.swift in Sources */,
+				5503C53F1F3F697D00DA3DA3 /* ChatInputContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K3GEYRGB99;
-				INFOPLIST_FILE = "B&P Messenger/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../GoogleService-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brandon.B-P-Messenger";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -398,7 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K3GEYRGB99;
-				INFOPLIST_FILE = "B&P Messenger/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../GoogleService-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.brandon.B-P-Messenger";
 				PRODUCT_NAME = "$(TARGET_NAME)";

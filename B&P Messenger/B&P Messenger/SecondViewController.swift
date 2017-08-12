@@ -39,7 +39,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func createRoomButton(_ sender: AnyObject) {
-        Database.database().reference().child((createRoom?.text!)!).setValue(["MyDatabase : 1234"])
+        group = createRoom!.text!
         list.append((createRoom?.text)!)
         print(createRoom?.text)
         DispatchQueue.main.async(execute: { () -> Void in
@@ -50,6 +50,7 @@ class SecondViewController: UIViewController,UITableViewDelegate, UITableViewDat
     func observeChatRooms(){
         Database.database().reference().observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [DataSnapshot]{
+                self.list.removeAll()
                 for snap in snapshot{
                     print(snap.key)
                     self.list.append(snap.key)

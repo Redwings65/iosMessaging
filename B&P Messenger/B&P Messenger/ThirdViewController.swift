@@ -106,6 +106,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func handleSend(gesture: UITapGestureRecognizer){
         postMessage()
+        inputContainer.inputTextField.text = ""
     }
     
     

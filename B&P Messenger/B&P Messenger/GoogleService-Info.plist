@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>339156855695-c536rp8p3u0l8e6icaid2e8paqnnps9c.apps.googleusercontent.com</string>
+	<string>749833624682-hd5bk7vaq2qqra17m0tg1v0liu0udcsb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.339156855695-c536rp8p3u0l8e6icaid2e8paqnnps9c</string>
+	<string>com.googleusercontent.apps.749833624682-hd5bk7vaq2qqra17m0tg1v0liu0udcsb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDE3qYHDmfz2hreEd1FI7orNWzgryjiguQ</string>
+	<string>AIzaSyDqUjmy7i8XU4tlfqeYTQGVyxB7vfxA6Yg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>339156855695</string>
+	<string>749833624682</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.brandon.B-P-Messenger</string>
 	<key>PROJECT_ID</key>
-	<string>testproject-a6aa6</string>
+	<string>bp-messenger</string>
 	<key>STORAGE_BUCKET</key>
-	<string>testproject-a6aa6.appspot.com</string>
+	<string>bp-messenger.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:339156855695:ios:ca5940af1ef3aadf</string>
+	<string>1:749833624682:ios:d615a320fc97dc92</string>
 	<key>DATABASE_URL</key>
-	<string>https://testproject-a6aa6.firebaseio.com</string>
+	<string>https://bp-messenger.firebaseio.com</string>
 </dict>
 </plist>
